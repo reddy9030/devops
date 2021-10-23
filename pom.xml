@@ -4,7 +4,7 @@
 	<groupId>in.javahome</groupId>
 	<artifactId>myweb</artifactId>
 	<packaging>war</packaging>
-	<version>0.0.3-SNAPSHOT</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<name>my-app</name>
 	<url>http://maven.apache.org</url>
 
@@ -30,11 +30,16 @@
 
 	</dependencies>
 	<distributionManagement>
+		<snapshotRepository>
+			<id>nexus</id>
+			<url>http://172.31.9.153:8081/repository/my-app-snapshot/</url>
+		</snapshotRepository>
+
 		<repository>
-		    <id>nexus</id>
-		    <url>http://3.239.122.93:8081/repository/my-app-snapshot/</url>
+			<id>nexus</id>
+			<url>http://172.31.9.153:8081/repository/my-app-release/</url>
 		</repository>
-  	</distributionManagement>
+	</distributionManagement>
 	
 <build>
     <plugins>
